@@ -148,6 +148,17 @@ async function plaats(post, cred) {
   log("  beelden:");
   for (const l of links) log("    " + l);
 
+  // Een story: een beeld, als story, zonder caption.
+  if (post.soort === "story") {
+    const doos = await meta(user + "/media", {
+      media_type: "STORIES",
+      image_url: links[0],
+    }, "POST", token);
+    await wachtOpDoos(doos.id, token);
+    const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
+    return uit.id;
+  }
+
   if (links.length === 1) {
     const doos = await meta(user + "/media", {
       image_url: links[0],

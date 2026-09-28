@@ -41,6 +41,9 @@ jobs:
           # IG_TOKEN__ROKU_FILMS, IG_USER__ROKU_FILMS, enzovoort.
           IG_SLEUTELS: ${{ toJSON(secrets) }}
           IG_BASIS: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/gepland
+          # Een tijd zonder zone (17:30) is Nederlandse tijd, niet UTC. Nieuwe
+          # plannen hebben de zone erbij; dit is voor de oudere.
+          TZ: Europe/Amsterdam
         run: node instagram.mjs ${{ inputs.proef && '--proef' || '' }}
 
       # Altijd, ook als het plaatsen rood werd. Mislukt er een post en wordt de
