@@ -1,0 +1,58 @@
+name: Posten op Instagram
+
+# Elk uur kijken of er iets aan de beurt is. Niet een keer per dag: je zet in de
+# planner een tijd bij een post, en met een dagelijkse controle zou die tijd
+# niets betekenen. GitHub kan een geplande taak een kwartier laten wachten als
+# het druk is, dus reken op het uur en niet op de minuut.
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+    inputs:
+      proef:
+        description: "Alleen kijken, niets plaatsen"
+        type: boolean
+        default: false
+
+# Nodig om gepost.json terug te schrijven: dat is hoe hij onthoudt wat er al
+# uit is, en dus hoe hij niets twee keer doet.
+permissions:
+  contents: write
+
+concurrency:
+  group: posten
+  cancel-in-progress: false
+
+jobs:
+  posten:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Plaatsen
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER: ${{ secrets.IG_USER }}
+          # Alle geheimen, zodat elk project zijn eigen sleutel heeft:
+          # IG_TOKEN__ROKU_FILMS, IG_USER__ROKU_FILMS, enzovoort.
+          IG_SLEUTELS: ${{ toJSON(secrets) }}
+          IG_BASIS: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/gepland
+        run: node instagram.mjs ${{ inputs.proef && '--proef' || '' }}
+
+      # Altijd, ook als het plaatsen rood werd. Mislukt er een post en wordt de
+      # taak rood, dan moet wat WEL geplaatst is toch onthouden worden, anders
+      # gaat het het uur erna nog een keer de deur uit.
+      - name: Onthouden wat eruit is
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain gepland/gepost.json)" ]; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git add gepland/gepost.json
+            git commit -m "Gepost op $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          fi
