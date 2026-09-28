@@ -1,12 +1,12 @@
 name: Posten op Instagram
 
-# Elk uur kijken of er iets aan de beurt is. Niet een keer per dag: je zet in de
-# planner een tijd bij een post, en met een dagelijkse controle zou die tijd
-# niets betekenen. GitHub kan een geplande taak een kwartier laten wachten als
-# het druk is, dus reken op het uur en niet op de minuut.
+# Elk kwartier kijken wat er het komende kwartier aan de beurt is, en dan tot
+# de minuut wachten. Eerst was het een keer per uur, op :05, en dan ging een
+# post van 17:30 pas om 18:05. Niet precies op het kwartier, want dan is het
+# bij GitHub het drukst en schuift een taak soms een kwartier op.
 on:
   schedule:
-    - cron: "5 * * * *"
+    - cron: "4,19,34,49 * * * *"
   workflow_dispatch:
     inputs:
       proef:
@@ -26,8 +26,13 @@ concurrency:
 jobs:
   posten:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
+      # De tak zelf en niet de commit van toen de taak werd ingepland. Wacht
+      # hij op een vorige ronde, dan moet hij zien wat die net postte.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-node@v4
         with:
@@ -49,13 +54,30 @@ jobs:
       # Altijd, ook als het plaatsen rood werd. Mislukt er een post en wordt de
       # taak rood, dan moet wat WEL geplaatst is toch onthouden worden, anders
       # gaat het het uur erna nog een keer de deur uit.
+      # Kan botsen met de planner, die intussen een nieuw plan zet. Dan de
+      # nieuwste stand ophalen, gepost.json samenvoegen, en nog een keer.
       - name: Onthouden wat eruit is
         if: always()
         run: |
-          if [ -n "$(git status --porcelain gepland/gepost.json)" ]; then
-            git config user.name "github-actions"
-            git config user.email "github-actions@users.noreply.github.com"
+          if [ -z "$(git status --porcelain gepland/gepost.json)" ]; then exit 0; fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          cp gepland/gepost.json /tmp/gepost-hier.json
+          for poging in 1 2 3 4 5; do
+            git fetch origin "${{ github.ref_name }}"
+            git reset --hard "origin/${{ github.ref_name }}"
+            node -e '
+              const fs = require("fs");
+              const lees = (f) => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { return {}; } };
+              const daar = lees("gepland/gepost.json"), hier = lees("/tmp/gepost-hier.json");
+              fs.mkdirSync("gepland", { recursive: true });
+              fs.writeFileSync("gepland/gepost.json", JSON.stringify(Object.assign({}, daar, hier), null, 2) + "\n");
+            '
             git add gepland/gepost.json
+            git diff --cached --quiet && exit 0
             git commit -m "Gepost op $(date -u '+%Y-%m-%d %H:%M') UTC"
-            git push
-          fi
+            git push origin "HEAD:${{ github.ref_name }}" && exit 0
+            sleep $((poging * 3))
+          done
+          echo "gepost.json kon niet worden weggeschreven" >&2
+          exit 1

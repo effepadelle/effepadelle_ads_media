@@ -52,6 +52,12 @@ const ALLEEN = args.includes("--nu") ? args[args.indexOf("--nu") + 1] : null;
    en dat is precies hoe een account eruitziet als er iets kapot is. */
 const RUIMTE = 2;
 
+/* Hoe ver vooruit deze taak kijkt, in minuten. Hij draait elk kwartier; een
+   post die binnen dat kwartier aan de beurt is pakt hij nu al op, en dan
+   wacht hij tot de minuut zelf. Zo gaat 17:30 om 17:30 en niet pas bij de
+   volgende ronde. */
+const VOORUIT = Math.max(0, +(process.env.IG_VOORUIT || 16));
+
 function log(...a) { console.log(...a); }
 function stop(reden) { console.error("\n" + reden); process.exit(1); }
 
@@ -88,15 +94,16 @@ async function meta(pad, velden, methode = "POST", token = TOKEN) {
 /* Een doos klaarzetten duurt bij Instagram even, ook voor een foto. Pas als hij
    FINISHED zegt mag je hem plaatsen; doe je het eerder, dan krijg je een fout
    die nergens op slaat. */
-async function wachtOpDoos(id, token) {
-  for (let i = 0; i < 30; i++) {
+async function wachtOpDoos(id, token, seconden = 90) {
+  const rondes = Math.max(1, Math.ceil(seconden / 3));
+  for (let i = 0; i < rondes; i++) {
     const d = await meta(id, { fields: "status_code,status" }, "GET", token);
     if (d.status_code === "FINISHED") return true;
     if (d.status_code === "ERROR" || d.status_code === "EXPIRED") {
       throw new Error("Instagram kreeg het beeld niet verwerkt: "
         + (d.status || d.status_code) + "\n"
-        + "  Vaak is dat de link naar het beeld. Staat hij openbaar en is het "
-        + "echt een JPEG?");
+        + "  Vaak is dat de link naar het beeld. Staat hij openbaar, en is het "
+        + "een JPEG, of een mp4 met H.264 en AAC?");
     }
     await new Promise((r) => setTimeout(r, 3000));
   }
@@ -148,18 +155,39 @@ async function plaats(post, cred) {
   log("  beelden:");
   for (const l of links) log("    " + l);
 
-  // Een story: een beeld, als story, zonder caption.
-  if (post.soort === "story") {
-    const doos = await meta(user + "/media", {
-      media_type: "STORIES",
-      image_url: links[0],
-    }, "POST", token);
-    await wachtOpDoos(doos.id, token);
+  const link = (b) => BASIS + "/" + String(b).split("/").map(encodeURIComponent).join("/");
+  const isFilm = (u) => /\.(mp4|mov|m4v)(\?|$)/i.test(String(u));
+  /* Een film verwerken duurt bij Instagram minuten, geen seconden. */
+  const FILM = 600;
+
+  /* Een reel: de film en de thumbnail die jij in de planner maakte, als
+     cover. share_to_feed, anders staat hij alleen onder Reels en klopt je
+     raster niet meer met je profiel. */
+  if (post.video) {
+    log("  reel: " + link(post.video) + (post.cover ? "\n  cover: " + link(post.cover) : ""));
+    const velden = { media_type: "REELS", video_url: link(post.video),
+                     caption: post.caption || "", share_to_feed: "true" };
+    if (post.cover) velden.cover_url = link(post.cover);
+    const doos = await meta(user + "/media", velden, "POST", token);
+    await wachtOpDoos(doos.id, token, FILM);
     const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
     return uit.id;
   }
 
-  if (links.length === 1) {
+  // Een story: een beeld of een film, als story, zonder caption.
+  if (post.soort === "story") {
+    const film = isFilm(links[0]);
+    const doos = await meta(user + "/media", film
+      ? { media_type: "STORIES", video_url: links[0] }
+      : { media_type: "STORIES", image_url: links[0] }, "POST", token);
+    await wachtOpDoos(doos.id, token, film ? FILM : undefined);
+    const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
+    return uit.id;
+  }
+
+  if (!links.length) throw new Error("Deze post heeft geen beelden in het plan.");
+
+  if (links.length === 1 && !isFilm(links[0])) {
     const doos = await meta(user + "/media", {
       image_url: links[0],
       caption: post.caption || "",
@@ -169,14 +197,16 @@ async function plaats(post, cred) {
     return uit.id;
   }
 
-  // Een carrousel: eerst elk beeld apart, dan de doos eromheen.
+  /* Een carrousel: eerst elk beeld apart, dan de doos eromheen. Een film is
+     daarin een kind met media_type VIDEO; aan de extensie te zien, want de
+     planner noemt alles in gepland/ naar wat het is. */
   const kinderen = [];
-  for (const link of links) {
-    const kind = await meta(user + "/media", {
-      image_url: link,
-      is_carousel_item: "true",
-    }, "POST", token);
-    await wachtOpDoos(kind.id, token);
+  for (const l of links) {
+    const film = isFilm(l);
+    const kind = await meta(user + "/media", film
+      ? { media_type: "VIDEO", video_url: l, is_carousel_item: "true" }
+      : { image_url: l, is_carousel_item: "true" }, "POST", token);
+    await wachtOpDoos(kind.id, token, film ? FILM : undefined);
     kinderen.push(kind.id);
   }
   const doos = await meta(user + "/media", {
@@ -212,6 +242,7 @@ async function main() {
   const alGepost = (p) => !!(gepost[p.id] || (p.oudId && gepost[p.oudId]));
 
   const nu = new Date();
+  const straks = new Date(nu.getTime() + VOORUIT * 60000);
   const aanDeBeurt = plan.posts.filter((p) => {
     if (alGepost(p)) return false;
     // Wat je zelf vanuit de app plaatst, met muziek, laten we liggen.
@@ -219,10 +250,10 @@ async function main() {
     if (ALLEEN) return p.id === ALLEEN;
     const wanneer = new Date(p.wanneer);
     if (isNaN(wanneer)) return false;
-    if (wanneer > nu) return false;
+    if (wanneer > straks) return false;
     const dagen = (nu - wanneer) / 86400000;
     return INHALEN || dagen <= RUIMTE;
-  });
+  }).sort((a, b) => new Date(a.wanneer) - new Date(b.wanneer));
 
   const overtijd = plan.posts.filter((p) => !alGepost(p) && !p.zelf && !ALLEEN
     && new Date(p.wanneer) <= nu
@@ -243,8 +274,15 @@ async function main() {
 
   let mislukt = 0;
   for (const post of aanDeBeurt) {
+    const n = (post.beelden || []).length;
     log("\n" + post.wanneer + "  " + (post.project ? post.project + ": " : "") + post.naam
-      + " (" + post.beelden.length + (post.beelden.length === 1 ? " beeld)" : " beelden)"));
+      + " (" + (post.video ? "reel" : n + (n === 1 ? " beeld" : " beelden")) + ")");
+    /* Nog niet zover? Dan wachten tot de minuut. */
+    const wacht = new Date(post.wanneer) - new Date();
+    if (wacht > 0 && !PROEF && !ALLEEN) {
+      log("  wacht " + Math.round(wacht / 1000) + " seconden tot " + post.wanneer);
+      await new Promise((r) => setTimeout(r, wacht));
+    }
     const cred = await sleutelVoor(post);
     if (!cred.token) {
       // Deze overslaan en zeggen waarom; de posts van andere projecten gaan door.
@@ -260,7 +298,8 @@ async function main() {
     try {
       const id = await plaats(post, cred);
       gepost[post.id] = { wanneer: new Date().toISOString(), media: id,
-                          beelden: post.beelden, project: post.project || undefined,
+                          beelden: post.beelden, video: post.video || undefined,
+                          project: post.project || undefined,
                           account: cred.wie || undefined };
       fs.writeFileSync(GEPOST, JSON.stringify(gepost, null, 2));
       log("  geplaatst, media " + id);
