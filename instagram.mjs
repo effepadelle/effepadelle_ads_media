@@ -11,7 +11,10 @@
  *     node instagram.mjs --nu <id>  die ene post, ongeacht de datum
  *
  * Wat er in de omgeving moet staan:
- *     IG_SLEUTELS  alle geheimen van dit repo als JSON (de taak geeft ze mee).
+ *     IG_TOKEN__NAAM, IG_USER__NAAM  de sleutel per project, bij naam; de taak
+ *                  geeft die van de projecten in het plan mee. (IG_SLEUTELS, alle
+ *                  geheimen als JSON, werkt ook nog, maar GitHub houdt een taak
+ *                  die dat doet tegen als mogelijk kwaadaardig.)
  *                  Per project IG_TOKEN__NAAM en IG_USER__NAAM, bijvoorbeeld
  *                  IG_TOKEN__ROKU_FILMS. De planner zet ze er zelf neer.
  *     IG_TOKEN   de oude, ene sleutel; alleen voor posts van voor het
@@ -38,6 +41,11 @@ const USER = process.env.IG_USER || "";
    van ROKU Films nooit met de sleutel van EffePadelle de deur uit gaat. */
 let SLEUTELS = {};
 try { SLEUTELS = JSON.parse(process.env.IG_SLEUTELS || "{}") || {}; } catch (err) { SLEUTELS = {}; }
+/* En los, zoals de taak ze nu meegeeft: IG_TOKEN__ROKU_FILMS en
+   IG_USER__ROKU_FILMS als eigen omgevingsvariabelen. Leeg telt niet. */
+for (const [k, v] of Object.entries(process.env)) {
+  if (/^IG_(TOKEN|USER)__[A-Z0-9_]+$/.test(k) && v) SLEUTELS[k] = v;
+}
 const BASIS = (process.env.IG_BASIS || "").replace(/\/+$/, "");
 const HOST = process.env.IG_HOST || "graph.instagram.com";
 const VERSIE = process.env.IG_VERSIE || "v23.0";
