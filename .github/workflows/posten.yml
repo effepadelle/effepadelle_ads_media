@@ -42,9 +42,14 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER: ${{ secrets.IG_USER }}
-          # Alle geheimen, zodat elk project zijn eigen sleutel heeft:
-          # IG_TOKEN__ROKU_FILMS, IG_USER__ROKU_FILMS, enzovoort.
-          IG_SLEUTELS: ${{ toJSON(secrets) }}
+          # De sleutel van elk project in het plan, bij naam. Niet alle geheimen
+          # in een keer: zo worden geheimen gestolen, en daarom hield GitHub elke
+          # run tegen. Zet klaar in de planner vult dit blok met de projecten die
+          # in het plan staan.
+          # BEGIN SLEUTELS
+          IG_TOKEN__ROKU_FILMS: ${{ secrets.IG_TOKEN__ROKU_FILMS }}
+          IG_USER__ROKU_FILMS: ${{ secrets.IG_USER__ROKU_FILMS }}
+          # EIND SLEUTELS
           IG_BASIS: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/gepland
           # Een tijd zonder zone (17:30) is Nederlandse tijd, niet UTC. Nieuwe
           # plannen hebben de zone erbij; dit is voor de oudere.
@@ -81,5 +86,3 @@ jobs:
           done
           echo "gepost.json kon niet worden weggeschreven" >&2
           exit 1
-
-          
