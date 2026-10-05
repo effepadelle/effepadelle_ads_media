@@ -47,6 +47,8 @@ jobs:
           # run tegen. Zet klaar in de planner vult dit blok met de projecten die
           # in het plan staan.
           # BEGIN SLEUTELS
+          IG_TOKEN__EFFEPADELLE: ${{ secrets.IG_TOKEN__EFFEPADELLE }}
+          IG_USER__EFFEPADELLE: ${{ secrets.IG_USER__EFFEPADELLE }}
           IG_TOKEN__ROKU_FILMS: ${{ secrets.IG_TOKEN__ROKU_FILMS }}
           IG_USER__ROKU_FILMS: ${{ secrets.IG_USER__ROKU_FILMS }}
           # EIND SLEUTELS
