@@ -13,17 +13,6 @@
     "handmatig": "Al vanuit de planner geplaatst (Publiceer nu); hier gezet zodat de taak hem niet nog een keer post.",
     "video": "roku_films/001-foto-77-mublloqy.mp4"
   },
-  "ROKU_FILMS:Nieuwe map 2": {
-    "wanneer": "2026-09-29T11:06:02.792Z",
-    "media": "17952795771036670",
-    "beelden": [
-      "roku_films/001-Nieuwe-map-2/01.jpg",
-      "roku_films/001-Nieuwe-map-2/02.mp4",
-      "roku_films/001-Nieuwe-map-2/03.jpg"
-    ],
-    "project": "ROKU Films",
-    "account": "rokufilms"
-  },
   "ROKU_FILMS:foto-80-mublloqz": {
     "wanneer": "2026-09-29T11:20:37.781Z",
     "media": "18355452235172223",
@@ -71,6 +60,17 @@
     "media": "18104537543351235",
     "beelden": [],
     "video": "roku_films/004-foto-51-mumkhe7g.mp4",
+    "project": "ROKU Films",
+    "account": "rokufilms"
+  },
+  "ROKU_FILMS:Nieuwe map 2": {
+    "wanneer": "2026-09-29T11:06:02.792Z",
+    "media": "17952795771036670",
+    "beelden": [
+      "roku_films/001-Nieuwe-map-2/01.jpg",
+      "roku_films/001-Nieuwe-map-2/02.mp4",
+      "roku_films/001-Nieuwe-map-2/03.jpg"
+    ],
     "project": "ROKU Films",
     "account": "rokufilms"
   }
