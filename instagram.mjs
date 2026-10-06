@@ -157,8 +157,63 @@ async function sleutelVoor(post) {
   return { reden: "geen IG_TOKEN en IG_USER voor deze oudere post" };
 }
 
+/* Wie je in de caption met @ noemt, krijgt ook een echte tag in de post.
+   Dan meldt Instagram "heeft je getagd in een bericht" en staat de post op
+   hun tabblad Getagd; een @ in de tekst alleen geeft lang niet altijd een
+   melding. Je eigen account niet, elke naam een keer. */
+function captionNamen(caption, zelf) {
+  const z = String(zelf || "").toLowerCase(), gezien = new Set(), uit = [];
+  for (const m of String(caption || "").matchAll(/(^|[^\w.@])@([A-Za-z0-9._]{1,30})/g)) {
+    const n = m[2].replace(/\.+$/, ""), k = n.toLowerCase();
+    if (!n || k === z || gezien.has(k)) continue;
+    gezien.add(k);
+    uit.push(n);
+  }
+  return uit;
+}
+
+/* Op een foto moet een tag een plek hebben. Een raster van vijf bij vier,
+   want je ziet ze pas als je op de foto tikt. Hoogstens twintig per beeld. */
+function fotoTags(namen) {
+  return namen.slice(0, 20).map((n, i) => ({ username: n,
+    x: Math.round((0.1 + 0.2 * (i % 5)) * 1000) / 1000,
+    y: Math.round((0.15 + 0.233 * Math.floor(i / 5)) * 1000) / 1000 }));
+}
+
+/* Een doos maken met tags. Weigert Instagram een tag (een privé-account,
+   een naam die niet bestaat), dan gaat de post alsnog, zonder tags. */
+async function doosMetTags(user, velden, token) {
+  try {
+    return await meta(user + "/media", velden, "POST", token);
+  } catch (err) {
+    if (!velden.user_tags) throw err;
+    const regels = String(err.message).split("\n").map((r) => r.trim()).filter(Boolean);
+    const waarom = regels[1] || regels[0] || "";
+    /* Noemt Instagram de naam die niet mag, dan alleen die eruit en de rest
+       wel taggen. Anders alle tags eruit: de post gaat altijd door. */
+    const alle = JSON.parse(velden.user_tags);
+    const rest = alle.filter((t) => !new RegExp("(^|[^\\w.])" + t.username.replace(/[.]/g, "\\.") + "($|[^\\w.])", "i").test(waarom));
+    const opnieuw = Object.assign({}, velden);
+    if (rest.length && rest.length < alle.length) {
+      log("  tag niet gelukt (" + waarom + "); opnieuw zonder @" + alle.filter((t) => !rest.includes(t)).map((t) => t.username).join(", @"));
+      opnieuw.user_tags = JSON.stringify(rest);
+      try { return await meta(user + "/media", opnieuw, "POST", token); }
+      catch (err2) { /* dan zonder tags */ }
+    } else {
+      log("  tags lukten niet (" + waarom + "); opnieuw zonder tags");
+    }
+    delete opnieuw.user_tags;
+    return await meta(user + "/media", opnieuw, "POST", token);
+  }
+}
+
 async function plaats(post, cred) {
   const { token, user } = cred;
+  // Iedereen uit de caption, plus wie je in de planner zelf tagde.
+  const namen = captionNamen(post.caption, cred.wie).concat(
+    (Array.isArray(post.tags) ? post.tags : []).map((t) => String(t).replace(/^@/, "").trim()).filter(Boolean))
+    .filter((n, i, a) => a.findIndex((x) => x.toLowerCase() === n.toLowerCase()) === i);
+  if (namen.length && post.soort !== "story") log("  tags: @" + namen.join(", @"));
   const links = post.beelden.map((b) => BASIS + "/" + b.split("/").map(encodeURIComponent).join("/"));
   log("  beelden:");
   for (const l of links) log("    " + l);
@@ -176,7 +231,9 @@ async function plaats(post, cred) {
     const velden = { media_type: "REELS", video_url: link(post.video),
                      caption: post.caption || "", share_to_feed: "true" };
     if (post.cover) velden.cover_url = link(post.cover);
-    const doos = await meta(user + "/media", velden, "POST", token);
+    // Bij een reel alleen de naam: een plek erbij geeft een fout.
+    if (namen.length) velden.user_tags = JSON.stringify(namen.slice(0, 20).map((u) => ({ username: u })));
+    const doos = await doosMetTags(user, velden, token);
     await wachtOpDoos(doos.id, token, FILM);
     const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
     return uit.id;
@@ -185,9 +242,15 @@ async function plaats(post, cred) {
   // Een story: een beeld of een film, als story, zonder caption.
   if (post.soort === "story") {
     const film = isFilm(links[0]);
-    const doos = await meta(user + "/media", film
+    const velden = film
       ? { media_type: "STORIES", video_url: links[0] }
-      : { media_type: "STORIES", image_url: links[0] }, "POST", token);
+      : { media_type: "STORIES", image_url: links[0] };
+    /* Getagde accounts: die krijgen een vermelding. Kan bij stories sinds
+       juli 2025 (user_tags, zonder sticker). Hoogstens twintig. */
+    const tags = (Array.isArray(post.tags) ? post.tags : [])
+      .map((t) => String(t).replace(/^@/, "").trim()).filter(Boolean).slice(0, 20);
+    if (tags.length) velden.user_tags = JSON.stringify(tags.map((u) => ({ username: u })));
+    const doos = await doosMetTags(user, velden, token);
     await wachtOpDoos(doos.id, token, film ? FILM : undefined);
     const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
     return uit.id;
@@ -196,10 +259,9 @@ async function plaats(post, cred) {
   if (!links.length) throw new Error("Deze post heeft geen beelden in het plan.");
 
   if (links.length === 1 && !isFilm(links[0])) {
-    const doos = await meta(user + "/media", {
-      image_url: links[0],
-      caption: post.caption || "",
-    }, "POST", token);
+    const velden = { image_url: links[0], caption: post.caption || "" };
+    if (namen.length) velden.user_tags = JSON.stringify(fotoTags(namen));
+    const doos = await doosMetTags(user, velden, token);
     await wachtOpDoos(doos.id, token);
     const uit = await meta(user + "/media_publish", { creation_id: doos.id }, "POST", token);
     return uit.id;
@@ -208,15 +270,24 @@ async function plaats(post, cred) {
   /* Een carrousel: eerst elk beeld apart, dan de doos eromheen. Een film is
      daarin een kind met media_type VIDEO; aan de extensie te zien, want de
      planner noemt alles in gepland/ naar wat het is. */
+  /* Tags kunnen alleen op de foto's, niet op een film. Twintig per foto: bij
+     meer namen gaan de volgende op de volgende foto. */
   const kinderen = [];
+  let nogTaggen = namen.slice();
   for (const l of links) {
     const film = isFilm(l);
-    const kind = await meta(user + "/media", film
+    const velden = film
       ? { media_type: "VIDEO", video_url: l, is_carousel_item: "true" }
-      : { image_url: l, is_carousel_item: "true" }, "POST", token);
+      : { image_url: l, is_carousel_item: "true" };
+    if (!film && nogTaggen.length) {
+      velden.user_tags = JSON.stringify(fotoTags(nogTaggen));
+      nogTaggen = nogTaggen.slice(20);
+    }
+    const kind = await doosMetTags(user, velden, token);
     await wachtOpDoos(kind.id, token, film ? FILM : undefined);
     kinderen.push(kind.id);
   }
+  if (nogTaggen.length) log("  niet getagd, geen foto meer over: @" + nogTaggen.join(", @"));
   const doos = await meta(user + "/media", {
     media_type: "CAROUSEL",
     children: kinderen.join(","),
