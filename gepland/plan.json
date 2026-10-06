@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-10-06T15:50:46.290Z",
+  "gemaakt": "2026-10-06T16:56:32.543Z",
   "posts": [
     {
       "id": "EFFEPADELLE:photo-people-you-like-photo",
@@ -517,103 +517,90 @@
       "username": "rokufilms"
     },
     {
-      "id": "DOP:foto-1-muvoqlbp",
-      "naam": "CHEAPTICKETS_COMBI",
-      "wanneer": "2026-10-06T18:05:00+02:00",
-      "caption": "Three commercials for CheapTickets, shot in Italy with a small crew. A beach, a mountain and a terrace.\n\nWe brought one mirror to Italy and counted on the sun a bit too much. The weather didn't really cooperate, so on all three days we had a short window to shoot. On one of them it was about five minutes. Everything else was waiting and being ready.\n\nProd: @_tante.tini\n\nRegie: Timo Mangelaars @timomangelaars\n1st AD: Steven Gielen @stevenpaulgielen\nNiek Mulder @mulderniek\nDoP: Robert Kuipers @kuipers\n1st AC: Marcel Overwijn @marcel_overwijn\nGaffer: Friso Tjalma @ftjalma\nBest boy: Kenny Nagelkerke @kennymcgizzle\nProducer: Marlon van der Strigt @marlonvds\nProductieassistent: Huib Noordermeer @huib.bent\nProductieassistent: Max Jansen @max.jansun\nArt director: Danithia van Weenum @danithia\nFotograaf: Kris Pouw @krispouw\nFotografie-assistent: Jacco Stehouwer @jaacccoooo\n\n#cheaptickets #dop #directorofphotography #cinematography #commercialfilm #tvc #italy #onset #filmcrew #lightweightcrew #naturallight #bouncelight #cameradepartment #filmmaking #adfilm #reclamefilm #cameraman #behindthescenes #shotinitaly #filmproductie",
+      "id": "DOP:foto-59-mufocwjh",
+      "naam": "GREENWHEELS_FINAL_V3",
+      "wanneer": "2026-10-08T15:00:00+02:00",
+      "caption": "Three commercials for Greenwheels' Let's Go Greenwheels campaign. Four friends straight out of ice-cold water, a woman with a giant painting of a pink sheep on the back seat, and a dad in full safari gear with a tiger and a lion in the back.\n\nOne day, two locations in Haarlemmerliede: a marina parking lot in the morning and a house after lunch. Almost everything happens in and around one car, and every spot ends on a drone shot.\n\nThe thing that always takes work is building a huge butterfly over the car to block the reflections of the white clouds in the windscreen. Without it you barely see anything through the glass, and even a pola has a hard time against that. This is the cleanest option and also the most work, but you do get a really clean windscreen out of it.\n\nProd: @_tante.tini\nRegie: Sebastiaan van Marion @bravouretourjours\n1st AD: Niek Mulder @mulderniek\nProducer: Marlon van der Strigt @marlonvds\nProducer: Leonie Velders @leonievelders_\nProductieassistent: Soraya van Vliet @sorayav\nDoP: Robert Kuipers @kuipers\nGaffer: Loek Withaar @ikloek\nBest boy: Jayson Todikromo @jaytodi\nSetdresser: Ella Meesters @ellameesters\nFotograaf: Kris Pouw @krispouw\nFotografie-assistent: Noud van Louw @noudvandelouw\nKinderbegeleider: Jet de Waal @jetdewaal\n\n#greenwheels #letsgogreenwheels #dop #directorofphotography #cinematography #commercialfilm #tvc #onset #filmcrew #carcommercial #autodelen #carsharing #dronecinematography #cameradepartment #filmmaking #adfilm #reclamefilm #cameraman #behindthescenes #filmproductie",
       "beelden": [],
-      "video": "dop/001-foto-1-muvoqlbp.mp4",
-      "cover": "dop/001-foto-1-muvoqlbp-thumbnail.jpg",
-      "vinger": "y6m8d4",
-      "oudId": "foto-1-muvoqlbp",
+      "video": "dop/001-foto-59-mufocwjh.mp4",
+      "cover": "dop/001-foto-59-mufocwjh-thumbnail.jpg",
+      "vinger": "y0ke53",
+      "oudId": "foto-59-mufocwjh",
       "project": "DOP",
       "account": "DOP",
       "username": "roku.dop"
     },
     {
-      "id": "DOP:foto-1-muvoqlbp~story1",
+      "id": "DOP:foto-59-mufocwjh~story1",
       "soort": "story",
-      "naam": "CHEAPTICKETS_COMBI, story 1",
-      "wanneer": "2026-10-06T18:10:00+02:00",
+      "naam": "GREENWHEELS_FINAL_V3, story 1",
+      "wanneer": "2026-10-08T00:05:00+02:00",
       "caption": "",
       "beelden": [
-        "dop/story-foto-1-muvoqlbp-1.jpg"
+        "dop/story-foto-59-mufocwjh-1.jpg"
       ],
       "tags": [
-        "timomangelaars",
         "_tante.tini",
+        "bravouretourjours",
+        "mulderniek",
         "marlonvds",
-        "stevenpaulgielen",
-        "marcel_overwijn",
-        "ftjalma",
-        "kennymcgizzle",
-        "huib.bent",
-        "max.jansun",
-        "danithia",
+        "leonievelders_",
+        "sorayav",
+        "kuipers",
+        "ikloek",
+        "jaytodi",
+        "ellameesters",
         "krispouw",
-        "jaacccoooo",
-        "saschaworung",
-        "mulderniek"
+        "noudvandelouw",
+        "jetdewaal"
       ],
-      "oudId": "foto-1-muvoqlbp~story1",
+      "oudId": "foto-59-mufocwjh~story1",
       "project": "DOP",
       "account": "DOP",
       "username": "roku.dop"
     },
     {
-      "id": "DOP:foto-1-muvoqlbp~story2",
+      "id": "DOP:foto-59-mufocwjh~story2",
       "soort": "story",
-      "naam": "CHEAPTICKETS_COMBI, story 2",
-      "wanneer": "2026-10-06T19:08:00+02:00",
+      "naam": "GREENWHEELS_FINAL_V3, story 2",
+      "wanneer": "2026-10-08T16:33:00+02:00",
       "caption": "",
       "beelden": [
-        "dop/story-foto-1-muvoqlbp-2.jpg"
+        "dop/story-foto-59-mufocwjh-2.jpg"
       ],
       "tags": [
-        "timomangelaars",
         "_tante.tini",
+        "bravouretourjours",
+        "mulderniek",
         "marlonvds",
-        "stevenpaulgielen",
-        "marcel_overwijn",
-        "ftjalma",
-        "kennymcgizzle",
-        "huib.bent",
-        "max.jansun",
-        "danithia",
+        "leonievelders_",
+        "sorayav",
+        "kuipers",
+        "ikloek",
+        "jaytodi",
+        "ellameesters",
         "krispouw",
-        "jaacccoooo",
-        "saschaworung",
-        "mulderniek"
+        "noudvandelouw",
+        "jetdewaal"
       ],
-      "oudId": "foto-1-muvoqlbp~story2",
+      "oudId": "foto-59-mufocwjh~story2",
       "project": "DOP",
       "account": "DOP",
       "username": "roku.dop"
     },
     {
-      "id": "DOP:foto-1-muvoqlbp~story3",
+      "id": "DOP:foto-59-mufocwjh~story3",
       "soort": "story",
-      "naam": "CHEAPTICKETS_COMBI, story 3",
-      "wanneer": "2026-10-06T20:07:00+02:00",
+      "naam": "GREENWHEELS_FINAL_V3, story 3",
+      "wanneer": "2026-10-08T18:00:00+02:00",
       "caption": "",
       "beelden": [
-        "dop/story-foto-1-muvoqlbp-3.jpg"
+        "dop/story-foto-59-mufocwjh-3.jpg"
       ],
-      "oudId": "foto-1-muvoqlbp~story3",
-      "project": "DOP",
-      "account": "DOP",
-      "username": "roku.dop"
-    },
-    {
-      "id": "DOP:foto-1-muvoqlbp~story4",
-      "soort": "story",
-      "naam": "CHEAPTICKETS_COMBI, story 4",
-      "wanneer": "2026-10-06T21:05:00+02:00",
-      "caption": "",
-      "beelden": [
-        "dop/story-foto-1-muvoqlbp-4.jpg"
+      "tags": [
+        "roosgroenen"
       ],
-      "oudId": "foto-1-muvoqlbp~story4",
+      "oudId": "foto-59-mufocwjh~story3",
       "project": "DOP",
       "account": "DOP",
       "username": "roku.dop"
