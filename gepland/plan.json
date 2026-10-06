@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-10-06T13:07:45.970Z",
+  "gemaakt": "2026-10-06T15:50:46.290Z",
   "posts": [
     {
       "id": "EFFEPADELLE:photo-people-you-like-photo",
@@ -515,6 +515,108 @@
       "project": "ROKU Films",
       "account": "ROKU_FILMS",
       "username": "rokufilms"
+    },
+    {
+      "id": "DOP:foto-1-muvoqlbp",
+      "naam": "CHEAPTICKETS_COMBI",
+      "wanneer": "2026-10-06T18:05:00+02:00",
+      "caption": "Three commercials for CheapTickets, shot in Italy with a small crew. A beach, a mountain and a terrace.\n\nWe brought one mirror to Italy and counted on the sun a bit too much. The weather didn't really cooperate, so on all three days we had a short window to shoot. On one of them it was about five minutes. Everything else was waiting and being ready.\n\nProd: @_tante.tini\n\nRegie: Timo Mangelaars @timomangelaars\n1st AD: Steven Gielen @stevenpaulgielen\nNiek Mulder @mulderniek\nDoP: Robert Kuipers @kuipers\n1st AC: Marcel Overwijn @marcel_overwijn\nGaffer: Friso Tjalma @ftjalma\nBest boy: Kenny Nagelkerke @kennymcgizzle\nProducer: Marlon van der Strigt @marlonvds\nProductieassistent: Huib Noordermeer @huib.bent\nProductieassistent: Max Jansen @max.jansun\nArt director: Danithia van Weenum @danithia\nFotograaf: Kris Pouw @krispouw\nFotografie-assistent: Jacco Stehouwer @jaacccoooo\n\n#cheaptickets #dop #directorofphotography #cinematography #commercialfilm #tvc #italy #onset #filmcrew #lightweightcrew #naturallight #bouncelight #cameradepartment #filmmaking #adfilm #reclamefilm #cameraman #behindthescenes #shotinitaly #filmproductie",
+      "beelden": [],
+      "video": "dop/001-foto-1-muvoqlbp.mp4",
+      "cover": "dop/001-foto-1-muvoqlbp-thumbnail.jpg",
+      "vinger": "y6m8d4",
+      "oudId": "foto-1-muvoqlbp",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muvoqlbp~story1",
+      "soort": "story",
+      "naam": "CHEAPTICKETS_COMBI, story 1",
+      "wanneer": "2026-10-06T18:10:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muvoqlbp-1.jpg"
+      ],
+      "tags": [
+        "timomangelaars",
+        "_tante.tini",
+        "marlonvds",
+        "stevenpaulgielen",
+        "marcel_overwijn",
+        "ftjalma",
+        "kennymcgizzle",
+        "huib.bent",
+        "max.jansun",
+        "danithia",
+        "krispouw",
+        "jaacccoooo",
+        "saschaworung",
+        "mulderniek"
+      ],
+      "oudId": "foto-1-muvoqlbp~story1",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muvoqlbp~story2",
+      "soort": "story",
+      "naam": "CHEAPTICKETS_COMBI, story 2",
+      "wanneer": "2026-10-06T19:08:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muvoqlbp-2.jpg"
+      ],
+      "tags": [
+        "timomangelaars",
+        "_tante.tini",
+        "marlonvds",
+        "stevenpaulgielen",
+        "marcel_overwijn",
+        "ftjalma",
+        "kennymcgizzle",
+        "huib.bent",
+        "max.jansun",
+        "danithia",
+        "krispouw",
+        "jaacccoooo",
+        "saschaworung",
+        "mulderniek"
+      ],
+      "oudId": "foto-1-muvoqlbp~story2",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muvoqlbp~story3",
+      "soort": "story",
+      "naam": "CHEAPTICKETS_COMBI, story 3",
+      "wanneer": "2026-10-06T20:07:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muvoqlbp-3.jpg"
+      ],
+      "oudId": "foto-1-muvoqlbp~story3",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muvoqlbp~story4",
+      "soort": "story",
+      "naam": "CHEAPTICKETS_COMBI, story 4",
+      "wanneer": "2026-10-06T21:05:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muvoqlbp-4.jpg"
+      ],
+      "oudId": "foto-1-muvoqlbp~story4",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
     }
   ]
 }
