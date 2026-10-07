@@ -223,5 +223,14 @@
     ],
     "project": "ROKU Films",
     "account": "rokufilms"
+  },
+  "EFFEPADELLE:app-screens-light-home": {
+    "wanneer": "2026-10-07T13:00:10.850Z",
+    "media": "17880727398627187",
+    "beelden": [
+      "effepadelle/001-app-screens-light-home.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
