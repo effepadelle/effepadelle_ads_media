@@ -310,5 +310,14 @@
     ],
     "project": "DOP",
     "account": "roku.dop"
+  },
+  "DOP:GREENWHEELS_FINAL_V3~story5": {
+    "wanneer": "2026-10-07T18:10:14.809Z",
+    "media": "18269909896306205",
+    "beelden": [
+      "dop/story-GREENWHEELS_FINAL_V3-5.jpg"
+    ],
+    "project": "DOP",
+    "account": "roku.dop"
   }
 }
