@@ -1,69 +1,6 @@
 {
-  "gemaakt": "2026-10-07T14:22:35.211Z",
+  "gemaakt": "2026-10-07T14:26:23.452Z",
   "posts": [
-    {
-      "id": "DOP:GREENWHEELS_FINAL_V3",
-      "naam": "GREENWHEELS_FINAL_V3",
-      "wanneer": "2026-10-07T16:00:00+02:00",
-      "caption": "Three commercials for Greenwheels' Let's Go Greenwheels campaign. \n\nThe thing that always takes work is building a huge butterfly over the car to block the reflections of the white clouds in the windscreen. Without it you barely see anything through the glass, and even a polarizer has a hard time against that. This is the cleanest option and also the most work, but the glass ends up free of reflections and you just see the people behind it.\n\nProd: @_tante.tini\nRegie: Sebastiaan van Marion @bravouretourjours\n1st AD: Niek Mulder @mulderniek\nProducer: Marlon van der Strigt @marlonvds\nProducer: Leonie Velders @leonievelders_\nProductieassistent: Soraya van Vliet @sorayav\nDoP: Robert Kuipers @kuipers\nGaffer: Loek Withaar @ikloek\nBest boy: Jayson Todikromo @jaytodi\nSetdresser: Ella Meesters @ellameesters\nFotograaf: Kris Pouw @krispouw\nFotografie-assistent: Noud van Louw @noudvandelouw\nKinderbegeleider: Jet de Waal @jetdewaal\n\n#greenwheels #letsgogreenwheels #dop #directorofphotography #cinematography #commercialfilm #tvc #onset #filmcrew #carcommercial #autodelen #carsharing #dronecinematography #cameradepartment #filmmaking #adfilm #reclamefilm #cameraman #behindthescenes #filmproductie",
-      "beelden": [
-        "dop/001-GREENWHEELS_FINAL_V3/01.mp4",
-        "dop/001-GREENWHEELS_FINAL_V3/02.jpg",
-        "dop/001-GREENWHEELS_FINAL_V3/03.jpg",
-        "dop/001-GREENWHEELS_FINAL_V3/04.jpg",
-        "dop/001-GREENWHEELS_FINAL_V3/05.jpg",
-        "dop/001-GREENWHEELS_FINAL_V3/06.jpg"
-      ],
-      "vinger": "19li1ps",
-      "oudId": "GREENWHEELS_FINAL_V3",
-      "project": "DOP",
-      "account": "DOP",
-      "username": "roku.dop"
-    },
-    {
-      "id": "DOP:GREENWHEELS_FINAL_V3~story1",
-      "soort": "story",
-      "naam": "GREENWHEELS_FINAL_V3, story 1",
-      "wanneer": "2026-10-07T17:00:00+02:00",
-      "caption": "",
-      "beelden": [
-        "dop/story-GREENWHEELS_FINAL_V3-1.jpg"
-      ],
-      "tags": [
-        "marlonvds",
-        "krispouw",
-        "mulderniek",
-        "bravouretourjours",
-        "leonievelders_",
-        "sorayav",
-        "kuipers",
-        "ikloek",
-        "jaytodi",
-        "_tante.tini",
-        "ellameesters",
-        "noudvandelouw",
-        "jetdewaal",
-        "roosgroenen"
-      ],
-      "oudId": "GREENWHEELS_FINAL_V3~story1",
-      "project": "DOP",
-      "account": "DOP",
-      "username": "roku.dop"
-    },
-    {
-      "id": "DOP:GREENWHEELS_FINAL_V3~story2",
-      "soort": "story",
-      "naam": "GREENWHEELS_FINAL_V3, story 2",
-      "wanneer": "2026-10-07T19:00:00+02:00",
-      "caption": "",
-      "beelden": [
-        "dop/story-GREENWHEELS_FINAL_V3-2.jpg"
-      ],
-      "oudId": "GREENWHEELS_FINAL_V3~story2",
-      "project": "DOP",
-      "account": "DOP",
-      "username": "roku.dop"
-    },
     {
       "id": "EFFEPADELLE:app-screens-light-home",
       "naam": "1 — Home",
@@ -1120,6 +1057,120 @@
       "project": "ROKU Films",
       "account": "ROKU_FILMS",
       "username": "rokufilms"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3",
+      "naam": "GREENWHEELS_FINAL_V3",
+      "wanneer": "2026-10-07T16:00:00+02:00",
+      "caption": "Three commercials for Greenwheels' Let's Go Greenwheels campaign. \n\nThe thing that always takes work is building a huge butterfly over the car to block the reflections of the white clouds in the windscreen. Without it you barely see anything through the glass, and even a polarizer has a hard time against that. This is the cleanest option and also the most work, but the glass ends up free of reflections and you just see the people behind it.\n\nProd: @_tante.tini\nRegie: Sebastiaan van Marion @bravouretourjours\n1st AD: Niek Mulder @mulderniek\nProducer: Marlon van der Strigt @marlonvds\nProducer: Leonie Velders @leonievelders_\nProductieassistent: Soraya van Vliet @sorayav\nDoP: Robert Kuipers @kuipers\nGaffer: Loek Withaar @ikloek\nBest boy: Jayson Todikromo @jaytodi\nSetdresser: Ella Meesters @ellameesters\nFotograaf: Kris Pouw @krispouw\nFotografie-assistent: Noud van Louw @noudvandelouw\nKinderbegeleider: Jet de Waal @jetdewaal\n\n#greenwheels #letsgogreenwheels #dop #directorofphotography #cinematography #commercialfilm #tvc #onset #filmcrew #carcommercial #autodelen #carsharing #dronecinematography #cameradepartment #filmmaking #adfilm #reclamefilm #cameraman #behindthescenes #filmproductie",
+      "beelden": [],
+      "video": "dop/001-foto-59-mufocwjh.mp4",
+      "cover": "dop/001-foto-59-mufocwjh-thumbnail.jpg",
+      "vinger": "1eakyh",
+      "oudId": "GREENWHEELS_FINAL_V3",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story1",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 1",
+      "wanneer": "2026-10-07T17:00:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-1.jpg"
+      ],
+      "tags": [
+        "marlonvds",
+        "krispouw",
+        "mulderniek",
+        "bravouretourjours",
+        "leonievelders_",
+        "sorayav",
+        "kuipers",
+        "ikloek",
+        "jaytodi",
+        "_tante.tini",
+        "ellameesters",
+        "noudvandelouw",
+        "jetdewaal",
+        "roosgroenen"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story1",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story2",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 2",
+      "wanneer": "2026-10-07T19:00:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-2.jpg"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story2",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story3",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 3",
+      "wanneer": "2026-10-07T18:10:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-3.jpg"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story3",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story4",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 4",
+      "wanneer": "2026-10-07T19:10:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-4.jpg"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story4",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story5",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 5",
+      "wanneer": "2026-10-07T20:10:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-5.jpg"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story5",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:GREENWHEELS_FINAL_V3~story6",
+      "soort": "story",
+      "naam": "GREENWHEELS_FINAL_V3, story 6",
+      "wanneer": "2026-10-07T21:10:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-GREENWHEELS_FINAL_V3-6.jpg"
+      ],
+      "oudId": "GREENWHEELS_FINAL_V3~story6",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
     }
   ]
 }
