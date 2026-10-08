@@ -180,8 +180,16 @@ function fotoTags(namen) {
     y: Math.round((0.15 + 0.233 * Math.floor(i / 5)) * 1000) / 1000 }));
 }
 
+/* Wie er bij de post die nu geplaatst wordt niet getagd kon worden. Dat komt
+   in gepost.json, zodat je weet wie je zelf nog moet laten weten. */
+let nietGetagd = [];
+
 /* Een doos maken met tags. Weigert Instagram een tag (een privé-account,
-   een naam die niet bestaat), dan gaat de post alsnog, zonder tags. */
+   een naam die niet bestaat), dan gaat de post alsnog, met wie wel mag.
+
+   Noemt Instagram de naam, dan alleen die eruit. Zegt hij alleen "Invalid
+   user id", dan halveren we tot we weten wie het is. Eerst ging dan iedereen
+   eruit: bij Greenwheels kregen dertien mensen geen melding om een naam. */
 async function doosMetTags(user, velden, token) {
   try {
     return await meta(user + "/media", velden, "POST", token);
@@ -189,18 +197,39 @@ async function doosMetTags(user, velden, token) {
     if (!velden.user_tags) throw err;
     const regels = String(err.message).split("\n").map((r) => r.trim()).filter(Boolean);
     const waarom = regels[1] || regels[0] || "";
-    /* Noemt Instagram de naam die niet mag, dan alleen die eruit en de rest
-       wel taggen. Anders alle tags eruit: de post gaat altijd door. */
     const alle = JSON.parse(velden.user_tags);
-    const rest = alle.filter((t) => !new RegExp("(^|[^\\w.])" + t.username.replace(/[.]/g, "\\.") + "($|[^\\w.])", "i").test(waarom));
+    const met = (lijst) => Object.assign({}, velden, { user_tags: JSON.stringify(lijst) });
+    let pogingen = 0;
+    const goede = async (lijst) => {
+      if (!lijst.length) return { tags: [] };
+      if (pogingen++ > 24) return { tags: [] };
+      try { return { tags: lijst, doos: await meta(user + "/media", met(lijst), "POST", token) }; }
+      catch (e) {
+        if (lijst.length === 1) return { tags: [] };
+        const half = Math.ceil(lijst.length / 2);
+        const a = await goede(lijst.slice(0, half)), b = await goede(lijst.slice(half));
+        return { tags: a.tags.concat(b.tags) };
+      }
+    };
+    const genoemd = alle.filter((t) => new RegExp("(^|[^\\w.])" + t.username.replace(/[.]/g, "\\.") + "($|[^\\w.])", "i").test(waarom));
+    let goed;
+    if (genoemd.length && genoemd.length < alle.length) {
+      goed = await goede(alle.filter((t) => !genoemd.includes(t)));
+    } else {
+      const half = Math.ceil(alle.length / 2);
+      const a = alle.length > 1 ? await goede(alle.slice(0, half)) : { tags: [] };
+      const b = alle.length > 1 ? await goede(alle.slice(half)) : { tags: [] };
+      goed = { tags: a.tags.concat(b.tags) };
+    }
+    const weg = alle.filter((t) => !goed.tags.includes(t)).map((t) => t.username);
+    nietGetagd.push(...weg);
+    log("  niet getagd (" + waarom + "): @" + weg.join(", @"));
+    if (goed.doos) return goed.doos;
     const opnieuw = Object.assign({}, velden);
-    if (rest.length && rest.length < alle.length) {
-      log("  tag niet gelukt (" + waarom + "); opnieuw zonder @" + alle.filter((t) => !rest.includes(t)).map((t) => t.username).join(", @"));
-      opnieuw.user_tags = JSON.stringify(rest);
+    if (goed.tags.length) {
+      opnieuw.user_tags = JSON.stringify(goed.tags);
       try { return await meta(user + "/media", opnieuw, "POST", token); }
       catch (err2) { /* dan zonder tags */ }
-    } else {
-      log("  tags lukten niet (" + waarom + "); opnieuw zonder tags");
     }
     delete opnieuw.user_tags;
     return await meta(user + "/media", opnieuw, "POST", token);
@@ -209,6 +238,7 @@ async function doosMetTags(user, velden, token) {
 
 async function plaats(post, cred) {
   const { token, user } = cred;
+  nietGetagd = [];
   // Iedereen uit de caption, plus wie je in de planner zelf tagde.
   const namen = captionNamen(post.caption, cred.wie).concat(
     (Array.isArray(post.tags) ? post.tags : []).map((t) => String(t).replace(/^@/, "").trim()).filter(Boolean))
@@ -287,7 +317,10 @@ async function plaats(post, cred) {
     await wachtOpDoos(kind.id, token, film ? FILM : undefined);
     kinderen.push(kind.id);
   }
-  if (nogTaggen.length) log("  niet getagd, geen foto meer over: @" + nogTaggen.join(", @"));
+  if (nogTaggen.length) {
+    log("  niet getagd, geen foto meer over: @" + nogTaggen.join(", @"));
+    nietGetagd.push(...nogTaggen);
+  }
   const doos = await meta(user + "/media", {
     media_type: "CAROUSEL",
     children: kinderen.join(","),
@@ -379,7 +412,8 @@ async function main() {
       gepost[post.id] = { wanneer: new Date().toISOString(), media: id,
                           beelden: post.beelden, video: post.video || undefined,
                           project: post.project || undefined,
-                          account: cred.wie || undefined };
+                          account: cred.wie || undefined,
+                          nietGetagd: nietGetagd.length ? nietGetagd.slice() : undefined };
       fs.writeFileSync(GEPOST, JSON.stringify(gepost, null, 2));
       log("  geplaatst, media " + id);
     } catch (err) {
