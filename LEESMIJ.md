@@ -73,6 +73,13 @@ in orde.
 
 ## Waar je op moet letten
 
+**Wat je na het klaarzetten verandert, gaat er vanzelf uit.** Pas je in de
+planner een ingeplande post aan (caption, beelden, stories, tijd), of staat hij
+niet meer in je raster, dan haalt de planner hem meteen uit het plan, ook hier.
+Zo kan er nooit een oude versie online gaan. Druk op Zet klaar om hem opnieuw
+in te plannen. Zet klaar zet ook geen posts van andere projecten terug die hier
+al weg waren.
+
 **De sleutel verloopt na zestig dagen.** De planner laat in de Agenda zien tot
 wanneer hij geldig is, en met **Verleng 60 dagen** in het koppelvenster maak je
 een nieuwe. Staat `gh` erop, dan gaat die meteen ook hierheen. Verloopt hij
