@@ -471,5 +471,42 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:2. Three weeks": {
+    "wanneer": "2026-10-10T09:02:08.684Z",
+    "media": "18020626616931493",
+    "beelden": [
+      "effepadelle/001-2.-Three-weeks/01.jpg",
+      "effepadelle/001-2.-Three-weeks/02.jpg",
+      "effepadelle/001-2.-Three-weeks/03.jpg",
+      "effepadelle/001-2.-Three-weeks/04.jpg",
+      "effepadelle/001-2.-Three-weeks/05.jpg",
+      "effepadelle/001-2.-Three-weeks/06.jpg",
+      "effepadelle/001-2.-Three-weeks/07.jpg",
+      "effepadelle/001-2.-Three-weeks/08.jpg",
+      "effepadelle/001-2.-Three-weeks/09.jpg",
+      "effepadelle/001-2.-Three-weeks/10.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
+  },
+  "EFFEPADELLE:2. Three weeks~story1": {
+    "wanneer": "2026-10-10T09:10:21.827Z",
+    "media": "18093765344656751",
+    "beelden": [
+      "effepadelle/story-2.-Three-weeks-1.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle",
+    "nietGetagd": [
+      "robertvduin",
+      "jerooney9",
+      "elroybrianknol",
+      "giorgioc_",
+      "maartenkees",
+      "bobbyl88_",
+      "mrbestmen",
+      "rick_nijssen"
+    ]
   }
 }
