@@ -592,5 +592,18 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:app-screens-light-group-chat~story1": {
+    "wanneer": "2026-10-11T14:10:08.148Z",
+    "media": "18234549508321870",
+    "beelden": [
+      "effepadelle/story-app-screens-light-group-chat-1.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle",
+    "nietGetagd": [
+      "bobbyl88_",
+      "jerooney9"
+    ]
   }
 }
