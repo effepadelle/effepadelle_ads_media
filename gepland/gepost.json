@@ -583,5 +583,14 @@
     ],
     "project": "DOP",
     "account": "roku.dop"
+  },
+  "EFFEPADELLE:app-screens-light-group-chat": {
+    "wanneer": "2026-10-11T14:00:10.544Z",
+    "media": "18140969323719420",
+    "beelden": [
+      "effepadelle/003-app-screens-light-group-chat.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
