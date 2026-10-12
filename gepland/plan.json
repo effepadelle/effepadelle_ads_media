@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-10-12T20:18:52.796Z",
+  "gemaakt": "2026-10-12T20:37:46.352Z",
   "posts": [
     {
       "id": "EFFEPADELLE:reel-02-who-plays-with-whom",
@@ -908,20 +908,6 @@
       "username": "rokufilms"
     },
     {
-      "id": "DOP:foto-49-mufocwjg",
-      "naam": "DJI_FINALS_V1",
-      "wanneer": "2026-10-12T17:30:00+02:00",
-      "caption": "Shot this campaign for DJI at the Justitieel Complex Schiphol, with @_tante.tini.\n\nThe rig was a fun one. FX3 on an RS4 Pro with a Tilta ring grip. I had to use the Super 35 version of the zoom, because the fullframe one is electronically driven and you see the lag when you zoom fast. So I cropped in a bit with clear image zoom, and that way I could get the effect I wanted with the optical image stabilization of the lens. One person zoomed out remotely while someone else pulled focus. Happy with how it came out.\n\nProd: Tante Tini @_tante.tini\nDirector: Thijs Vleut @thijsvleut\nAD: Niek Mulder @mulderniek\nProducer: Bart Vonk\nDOP: Robert Kuipers @kuipers\n1st AC: Max Jansen @max.jansun\n2nd AC: Jozef Zegers @zegersjozef\nGaffer: Friso Tjalsma @ftjalma\nProd. Ass.: Bastian Klever @bastian.kl0192\nVisagie: Shareen Agsteribbe @steribbestudios\nVFX supervisor: Sem Leuven @semleuven\n\n#dop #cinematography #sonyfx3 #fx3 #dji #rs4pro #tiltagear #gimbal #commercial #filmmaking #camerarig #behindthescenes #dutchfilm #superv35 #focuspull #cinematographer #setlife #campaign",
-      "beelden": [],
-      "video": "dop/001-foto-49-mufocwjg.mp4",
-      "cover": "dop/001-foto-49-mufocwjg-thumbnail.jpg",
-      "vinger": "1jlk496",
-      "oudId": "foto-49-mufocwjg",
-      "project": "DOP",
-      "account": "DOP",
-      "username": "roku.dop"
-    },
-    {
       "id": "CARDPONT:cardpont-pre-1-1",
       "naam": "Something's coming",
       "wanneer": "2026-10-13T18:00:00+02:00",
@@ -1485,6 +1471,76 @@
       "project": "Cardpont",
       "account": "CARDPONT",
       "username": "cardpont.offload"
+    },
+    {
+      "id": "DOP:foto-1-muwvwwuk",
+      "naam": "vlcsnap-2026-09-02-11h54m23s305",
+      "wanneer": "2026-10-13T17:30:00+02:00",
+      "caption": "Spring Reset for bol, shot in Amsterdam Studio 2 for DEPT with @_tante.tini.\n\nThe whole studio was painted in the bol green, which is always nicer than putting coloured light on a white wall. No spill, so the skintones stay neutral and you already have a lot of the brand colour in the frame. Makes it a lot easier to get something that looks good.\n\nDirector: Niek Mulder @mulderniek\nDOP: Robert Kuipers @kuipers\n1st AC: Marcel Overwijn @marcel_overwijn\nGaffer: Daan Derksen @daandoetlicht\nBest boy: Jan Sinke @jans1nke\nLight assist: Sil Verwijen @ikbensil_\nSound: Martijn de Rond @martijnderond\nProducer: Bart Vonk\nPA: @bastian.kl0192\nArt director: Aline Hogenberg @alinehogenberg @stylestudionoord\nArt assist: Ziggy Zwart @ziggyzwart\nStyling: Willeke Blom @willeke.elisabethstyling\nMUAH: @steribbestudios\n\n#bol #commercial #cinematography #dop #directorofphotography #filmmaking #onset #studioshoot #lighting #gaffer #colour #adfilm #amsterdam #tvc #behindthescenes #production #crew #filmcrew",
+      "beelden": [],
+      "video": "dop/001-foto-1-muwvwwuk.mov",
+      "cover": "dop/001-foto-1-muwvwwuk-thumbnail.jpg",
+      "vinger": "xln69u",
+      "oudId": "foto-1-muwvwwuk",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-mv5a6e6g",
+      "naam": "6dbdc26b-5137-4a3d-a516-30a5e0e0c6fa",
+      "wanneer": "2026-10-14T17:00:00+02:00",
+      "caption": "Me, in the back of a car while shooting the web series 'Rijkdom'. Ferrari serves as clickbait.\n\n#dop #cinematographer #cameraman #onset #behindthescenes #carrig #filmcrew #series #dutchfilm #setlife #cinematography #camera #filmmaking #ferrari #clickbait",
+      "beelden": [
+        "dop/002-foto-1-mv5a6e6g.jpg"
+      ],
+      "vinger": "m1zteo",
+      "oudId": "foto-1-mv5a6e6g",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muwvwwuk~story1",
+      "soort": "story",
+      "naam": "vlcsnap-2026-09-02-11h54m23s305, story 1",
+      "wanneer": "2026-10-13T17:40:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muwvwwuk-1.jpg"
+      ],
+      "oudId": "foto-1-muwvwwuk~story1",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muwvwwuk~story2",
+      "soort": "story",
+      "naam": "vlcsnap-2026-09-02-11h54m23s305, story 2",
+      "wanneer": "2026-10-13T18:40:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muwvwwuk-2.jpg"
+      ],
+      "oudId": "foto-1-muwvwwuk~story2",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
+    },
+    {
+      "id": "DOP:foto-1-muwvwwuk~story3",
+      "soort": "story",
+      "naam": "vlcsnap-2026-09-02-11h54m23s305, story 3",
+      "wanneer": "2026-10-13T19:40:00+02:00",
+      "caption": "",
+      "beelden": [
+        "dop/story-foto-1-muwvwwuk-3.jpg"
+      ],
+      "oudId": "foto-1-muwvwwuk~story3",
+      "project": "DOP",
+      "account": "DOP",
+      "username": "roku.dop"
     }
   ]
 }
