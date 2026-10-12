@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-10-12T14:11:56.049Z",
+  "gemaakt": "2026-10-12T14:24:18.871Z",
   "posts": [
     {
       "id": "ROKU_FILMS:foto-96-mubnjvjp",
@@ -298,23 +298,15 @@
       "username": "roku.dop"
     },
     {
-      "id": "EFFEPADELLE:7. Partners or points",
-      "naam": "7. Partners or points",
-      "wanneer": "2026-10-12T16:00:00+02:00",
-      "caption": "Four players, two teams, and by the second game everyone knew which pair was better.\n\nThat's what picking teams does. So the setup asks one more question: keep the same partner, or a new one every round?\n\nWith rotation nobody plays with the same person twice, and your points are your own. Nobody carries you and nobody drags you down. Or bring your own partner and play pair against pair until every team has met.\n\nSwipe to see both. It's one tap, and it's free on iOS and Android.\n\n#EffePadelle #padelpartner #padeltoernooi #padelrotation #padeldoubles #padel #padelapp #padelnederland #padelcompetitie #padellife #padeltime #padelplayer #padellovers #padelclub #padelcommunity #padelcompetition #padelfriends #padelbelgie",
-      "beelden": [
-        "effepadelle/001-7.-Partners-or-points/01.jpg",
-        "effepadelle/001-7.-Partners-or-points/02.jpg",
-        "effepadelle/001-7.-Partners-or-points/03.jpg",
-        "effepadelle/001-7.-Partners-or-points/04.jpg",
-        "effepadelle/001-7.-Partners-or-points/05.jpg",
-        "effepadelle/001-7.-Partners-or-points/06.jpg",
-        "effepadelle/001-7.-Partners-or-points/07.jpg",
-        "effepadelle/001-7.-Partners-or-points/08.jpg",
-        "effepadelle/001-7.-Partners-or-points/09.jpg"
-      ],
-      "vinger": "1y2yyj2",
-      "oudId": "7. Partners or points",
+      "id": "EFFEPADELLE:reel-02-who-plays-with-whom",
+      "naam": "Who plays with whom",
+      "wanneer": "2026-10-12T17:30:00+02:00",
+      "caption": "Same teams as last week? I sat out twice already. Who's keeping track?\n\nNobody has to. The app makes the rounds: new partners every round, and it tells you who is resting.\n\nBy the end it's the same for everyone. Everybody played as often, and everybody sat out as often. No counting, no arguing about it.\n\nCompetitive padel with the people you actually like. Free on iOS and Android.\n\n#EffePadelle #padeltournament #padelamericano #padelgroup #padelreels #padel #padelapp #padelnederland #padelcompetitie #padellife #padeltime #padelplayer #padellovers #padelclub #padelcommunity #padelcompetition #padelfriends #padelbelgie",
+      "beelden": [],
+      "video": "effepadelle/001-reel-02-who-plays-with-whom.mp4",
+      "cover": "effepadelle/001-reel-02-who-plays-with-whom-thumbnail.jpg",
+      "vinger": "2789bd",
+      "oudId": "reel-02-who-plays-with-whom",
       "project": "EffePadelle",
       "account": "EFFEPADELLE",
       "username": "effepadelle"
@@ -920,34 +912,6 @@
       ],
       "vinger": "4vrwax",
       "oudId": "photo-a-real-table-photo",
-      "project": "EffePadelle",
-      "account": "EFFEPADELLE",
-      "username": "effepadelle"
-    },
-    {
-      "id": "EFFEPADELLE:7. Partners or points~story1",
-      "soort": "story",
-      "naam": "7. Partners or points, story 1",
-      "wanneer": "2026-10-12T16:10:00+02:00",
-      "caption": "",
-      "beelden": [
-        "effepadelle/story-7.-Partners-or-points-1.jpg"
-      ],
-      "oudId": "7. Partners or points~story1",
-      "project": "EffePadelle",
-      "account": "EFFEPADELLE",
-      "username": "effepadelle"
-    },
-    {
-      "id": "EFFEPADELLE:7. Partners or points~story2",
-      "soort": "story",
-      "naam": "7. Partners or points, story 2",
-      "wanneer": "2026-10-12T17:10:00+02:00",
-      "caption": "",
-      "beelden": [
-        "effepadelle/story-7.-Partners-or-points-2.jpg"
-      ],
-      "oudId": "7. Partners or points~story2",
       "project": "EffePadelle",
       "account": "EFFEPADELLE",
       "username": "effepadelle"
