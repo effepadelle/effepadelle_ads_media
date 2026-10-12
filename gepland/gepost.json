@@ -640,5 +640,24 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:reel-02-who-plays-with-whom": {
+    "wanneer": "2026-10-12T15:30:34.297Z",
+    "media": "17924685630425354",
+    "beelden": [],
+    "video": "effepadelle/001-reel-02-who-plays-with-whom.mp4",
+    "project": "EffePadelle",
+    "account": "effepadelle"
+  },
+  "DOP:foto-49-mufocwjg": {
+    "wanneer": "2026-10-12T15:31:19.887Z",
+    "media": "17973602154140695",
+    "beelden": [],
+    "video": "dop/001-foto-49-mufocwjg.mp4",
+    "project": "DOP",
+    "account": "roku.dop",
+    "nietGetagd": [
+      "bastian.kl0192"
+    ]
   }
 }
