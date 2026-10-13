@@ -755,5 +755,14 @@
     ],
     "project": "DOP",
     "account": "roku.dop"
+  },
+  "CARDPONT:cardpont-pre-1-1": {
+    "wanneer": "2026-10-13T16:00:11.870Z",
+    "media": "18102754781529746",
+    "beelden": [
+      "cardpont/001-cardpont-pre-1-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
