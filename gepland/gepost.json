@@ -659,5 +659,14 @@
     "video": "effepadelle/001-reel-02-who-plays-with-whom.mp4",
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:were-live-scores": {
+    "wanneer": "2026-10-13T09:00:12.369Z",
+    "media": "18096053318534902",
+    "beelden": [
+      "effepadelle/002-were-live-scores.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
