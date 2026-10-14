@@ -782,5 +782,14 @@
     ],
     "project": "DOP",
     "account": "roku.dop"
+  },
+  "EFFEPADELLE:were-live-leaderboard": {
+    "wanneer": "2026-10-14T09:00:10.054Z",
+    "media": "18587542567070083",
+    "beelden": [
+      "effepadelle/004-were-live-leaderboard.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
