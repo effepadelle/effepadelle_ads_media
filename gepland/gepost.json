@@ -809,5 +809,14 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "DOP:foto-1-mv5a6e6g": {
+    "wanneer": "2026-10-14T15:00:11.557Z",
+    "media": "17912355537512847",
+    "beelden": [
+      "dop/002-foto-1-mv5a6e6g.jpg"
+    ],
+    "project": "DOP",
+    "account": "roku.dop"
   }
 }
