@@ -4,9 +4,11 @@ name: Posten op Instagram
 # de minuut wachten. Eerst was het een keer per uur, op :05, en dan ging een
 # post van 17:30 pas om 18:05. Niet precies op het kwartier, want dan is het
 # bij GitHub het drukst en schuift een taak soms een kwartier op.
+# UIT op verzoek van Robert (15-10-2026): er ging ongewild iets online.
+# Weer aan: haal het hekje weg voor de twee regels hieronder.
 on:
-  schedule:
-    - cron: "4,19,34,49 * * * *"
+  # schedule:
+  #   - cron: "4,19,34,49 * * * *"
   workflow_dispatch:
     inputs:
       proef:
