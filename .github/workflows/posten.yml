@@ -53,8 +53,6 @@ jobs:
           IG_USER__CARDPONT: ${{ secrets.IG_USER__CARDPONT }}
           IG_TOKEN__EFFEPADELLE: ${{ secrets.IG_TOKEN__EFFEPADELLE }}
           IG_USER__EFFEPADELLE: ${{ secrets.IG_USER__EFFEPADELLE }}
-          IG_TOKEN__ROKU_FILMS: ${{ secrets.IG_TOKEN__ROKU_FILMS }}
-          IG_USER__ROKU_FILMS: ${{ secrets.IG_USER__ROKU_FILMS }}
           # EIND SLEUTELS
           IG_BASIS: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/gepland
           # Een tijd zonder zone (17:30) is Nederlandse tijd, niet UTC. Nieuwe
