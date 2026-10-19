@@ -895,5 +895,13 @@
       "baas.bram",
       "vincentpjacobs"
     ]
+  },
+  "CARDPONT:cardpont-prereel-01": {
+    "wanneer": "2026-10-19T20:17:14.302Z",
+    "media": "18015075761764853",
+    "beelden": [],
+    "video": "cardpont/003-cardpont-prereel-01.mp4",
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
