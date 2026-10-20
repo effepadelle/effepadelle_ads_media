@@ -930,5 +930,14 @@
       "baas.bram",
       "vincentpjacobs"
     ]
+  },
+  "CARDPONT:cardpont-giveaway-1": {
+    "wanneer": "2026-10-20T21:44:02.616Z",
+    "media": "18043256492843098",
+    "beelden": [
+      "cardpont/001-cardpont-giveaway-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
