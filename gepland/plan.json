@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-10-20T20:20:42.580Z",
+  "gemaakt": "2026-10-20T20:24:24.635Z",
   "posts": [
     {
       "id": "ROKU_FILMS:foto-69-mublebu8",
@@ -42,20 +42,6 @@
       "project": "ROKU Films",
       "account": "ROKU_FILMS",
       "username": "rokufilms"
-    },
-    {
-      "id": "CARDPONT:cardpont-foto-04",
-      "naam": "Foto 04",
-      "wanneer": "2026-11-03T18:00:00+01:00",
-      "caption": "New shoot drive?\n\nCardpont sets up your project folders on it in one click.\n\nJoin the waitlist (link in bio): founders price €79 instead of €129. Launching December 1.\n\n#filmmaking #DIT #datawrangler #cinematography #filmcrew #macos",
-      "beelden": [
-        "cardpont/011-cardpont-foto-04.jpg"
-      ],
-      "vinger": "g5wuds",
-      "oudId": "cardpont-foto-04",
-      "project": "Cardpont",
-      "account": "CARDPONT",
-      "username": "cardpont.offload"
     }
   ]
 }
