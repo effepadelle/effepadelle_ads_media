@@ -973,5 +973,29 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:8. The chat opens first": {
+    "wanneer": "2026-10-23T17:52:08.063Z",
+    "media": "18157504291453578",
+    "beelden": [
+      "effepadelle/002-8.-The-chat-opens-first/01.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/02.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/03.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/04.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/05.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/06.jpg",
+      "effepadelle/002-8.-The-chat-opens-first/07.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-pre-3-1": {
+    "wanneer": "2026-10-23T17:52:19.650Z",
+    "media": "18116193284028149",
+    "beelden": [
+      "cardpont/004-cardpont-pre-3-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
