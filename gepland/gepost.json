@@ -1034,5 +1034,14 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-foto-06": {
+    "wanneer": "2026-10-24T16:54:23.504Z",
+    "media": "18096930449136573",
+    "beelden": [
+      "cardpont/005-cardpont-foto-06.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
