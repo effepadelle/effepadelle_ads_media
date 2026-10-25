@@ -465,6 +465,66 @@
     "project": "DOP",
     "account": "roku.dop"
   },
+  "EFFEPADELLE:9. On your wrist": {
+    "wanneer": "2026-10-18T19:04:18.267Z",
+    "media": "17963431149232743",
+    "beelden": [
+      "effepadelle/001-9.-On-your-wrist/01.jpg",
+      "effepadelle/001-9.-On-your-wrist/02.jpg",
+      "effepadelle/001-9.-On-your-wrist/03.jpg",
+      "effepadelle/001-9.-On-your-wrist/04.jpg",
+      "effepadelle/001-9.-On-your-wrist/05.jpg",
+      "effepadelle/001-9.-On-your-wrist/06.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-giveaway-1": {
+    "wanneer": "2026-10-20T21:44:02.616Z",
+    "media": "18043256492843098",
+    "beelden": [
+      "cardpont/001-cardpont-giveaway-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
+  },
+  "CARDPONT:PRE 2 · Copied is not safe": {
+    "wanneer": "2026-10-22T16:06:52.146Z",
+    "media": "18131574379806335",
+    "beelden": [
+      "cardpont/003-PRE-2-Copied-is-not-safe/01.jpg",
+      "cardpont/003-PRE-2-Copied-is-not-safe/02.jpg",
+      "cardpont/003-PRE-2-Copied-is-not-safe/03.jpg",
+      "cardpont/003-PRE-2-Copied-is-not-safe/04.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-pre-3-1": {
+    "wanneer": "2026-10-23T17:52:19.650Z",
+    "media": "18116193284028149",
+    "beelden": [
+      "cardpont/004-cardpont-pre-3-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-foto-06": {
+    "wanneer": "2026-10-24T16:54:23.504Z",
+    "media": "18096930449136573",
+    "beelden": [
+      "cardpont/005-cardpont-foto-06.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
+  },
+  "CARDPONT:Na launch · 02 · Copied is not safe": {
+    "wanneer": "2026-10-22T16:06:48+0000",
+    "zelf": true,
+    "media": "18131574379806335",
+    "permalink": "https://www.instagram.com/p/DezX6IIlg-p/",
+    "gevonden": true
+  },
   "CARDPONT:cardpont-prereel-04": {
     "wanneer": "2026-10-18T19:10:32.422Z",
     "media": "18110063471602472",
@@ -891,20 +951,6 @@
     "project": "ROKU Films",
     "account": "rokufilms"
   },
-  "EFFEPADELLE:9. On your wrist": {
-    "wanneer": "2026-10-18T19:04:18.267Z",
-    "media": "17963431149232743",
-    "beelden": [
-      "effepadelle/001-9.-On-your-wrist/01.jpg",
-      "effepadelle/001-9.-On-your-wrist/02.jpg",
-      "effepadelle/001-9.-On-your-wrist/03.jpg",
-      "effepadelle/001-9.-On-your-wrist/04.jpg",
-      "effepadelle/001-9.-On-your-wrist/05.jpg",
-      "effepadelle/001-9.-On-your-wrist/06.jpg"
-    ],
-    "project": "EffePadelle",
-    "account": "effepadelle"
-  },
   "ROKU_FILMS:foto-69-mublebu8": {
     "wanneer": "2026-10-19T14:37:44.686Z",
     "media": "18126391351799306",
@@ -931,15 +977,6 @@
       "vincentpjacobs"
     ]
   },
-  "CARDPONT:cardpont-giveaway-1": {
-    "wanneer": "2026-10-20T21:44:02.616Z",
-    "media": "18043256492843098",
-    "beelden": [
-      "cardpont/001-cardpont-giveaway-1.jpg"
-    ],
-    "project": "Cardpont",
-    "account": "cardpont.offload"
-  },
   "ROKU_FILMS:foto-70-mublebu8": {
     "wanneer": "2026-10-21T15:12:42.702Z",
     "media": "18116698796044266",
@@ -952,18 +989,6 @@
       "baas.bram",
       "vincentpjacobs"
     ]
-  },
-  "CARDPONT:PRE 2 · Copied is not safe": {
-    "wanneer": "2026-10-22T16:06:52.146Z",
-    "media": "18131574379806335",
-    "beelden": [
-      "cardpont/003-PRE-2-Copied-is-not-safe/01.jpg",
-      "cardpont/003-PRE-2-Copied-is-not-safe/02.jpg",
-      "cardpont/003-PRE-2-Copied-is-not-safe/03.jpg",
-      "cardpont/003-PRE-2-Copied-is-not-safe/04.jpg"
-    ],
-    "project": "Cardpont",
-    "account": "cardpont.offload"
   },
   "EFFEPADELLE:big-screen-who-it-is-for": {
     "wanneer": "2026-10-23T12:50:52.343Z",
@@ -988,15 +1013,6 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
-  },
-  "CARDPONT:cardpont-pre-3-1": {
-    "wanneer": "2026-10-23T17:52:19.650Z",
-    "media": "18116193284028149",
-    "beelden": [
-      "cardpont/004-cardpont-pre-3-1.jpg"
-    ],
-    "project": "Cardpont",
-    "account": "cardpont.offload"
   },
   "EFFEPADELLE:12. The one without the app": {
     "wanneer": "2026-10-23T21:20:22.590Z",
@@ -1034,15 +1050,6 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
-  },
-  "CARDPONT:cardpont-foto-06": {
-    "wanneer": "2026-10-24T16:54:23.504Z",
-    "media": "18096930449136573",
-    "beelden": [
-      "cardpont/005-cardpont-foto-06.jpg"
-    ],
-    "project": "Cardpont",
-    "account": "cardpont.offload"
   },
   "EFFEPADELLE:app-screens-light-profile": {
     "wanneer": "2026-10-24T21:51:05.738Z",
