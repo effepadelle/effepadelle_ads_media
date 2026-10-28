@@ -1188,5 +1188,14 @@
     "video": "cardpont/002-cardpont-prereel-02.mp4",
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "EFFEPADELLE:photo-trip-photo": {
+    "wanneer": "2026-10-28T20:33:43.465Z",
+    "media": "18075885497757378",
+    "beelden": [
+      "effepadelle/001-photo-trip-photo.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
