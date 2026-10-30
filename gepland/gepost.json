@@ -1234,5 +1234,14 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "EFFEPADELLE:photo-partner-photo": {
+    "wanneer": "2026-10-30T15:00:10.120Z",
+    "media": "17916010017507638",
+    "beelden": [
+      "effepadelle/015-photo-partner-photo.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
