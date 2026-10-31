@@ -1279,5 +1279,13 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-prereel-03": {
+    "wanneer": "2026-10-31T17:00:33.262Z",
+    "media": "18505638343096066",
+    "beelden": [],
+    "video": "cardpont/004-cardpont-prereel-03.mp4",
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
