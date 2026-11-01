@@ -1331,5 +1331,14 @@
     ],
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "EFFEPADELLE:photo-no-spreadsheet-photo": {
+    "wanneer": "2026-11-01T22:30:09.641Z",
+    "media": "18455169628121343",
+    "beelden": [
+      "effepadelle/022-photo-no-spreadsheet-photo.jpg"
+    ],
+    "project": "EffePadelle",
+    "account": "effepadelle"
   }
 }
