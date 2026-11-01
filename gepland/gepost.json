@@ -1322,5 +1322,14 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-foto-12": {
+    "wanneer": "2026-11-01T17:00:12.722Z",
+    "media": "18170225554475925",
+    "beelden": [
+      "cardpont/005-cardpont-foto-12.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
