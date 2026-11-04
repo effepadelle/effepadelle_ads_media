@@ -1380,5 +1380,13 @@
     ],
     "project": "EffePadelle",
     "account": "effepadelle"
+  },
+  "CARDPONT:cardpont-prereel-08": {
+    "wanneer": "2026-11-04T17:00:35.544Z",
+    "media": "18171586546461265",
+    "beelden": [],
+    "video": "cardpont/007-cardpont-prereel-08.mp4",
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
