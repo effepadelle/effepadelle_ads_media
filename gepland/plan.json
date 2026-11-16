@@ -1,5 +1,5 @@
 {
-  "gemaakt": "2026-11-16T18:06:54.964Z",
+  "gemaakt": "2026-11-16T18:07:02.765Z",
   "posts": [
     {
       "id": "CARDPONT:PRE 2 · Copied is not safe",
@@ -591,6 +591,48 @@
       "project": "ROKU Films",
       "account": "ROKU_FILMS",
       "username": "rokufilms"
+    },
+    {
+      "id": "KAIA:reel-kaia-03-lightbulb-result",
+      "naam": "Lightbulb (result trial)",
+      "wanneer": "2026-11-17T17:00:00+01:00",
+      "caption": "Comment 'GUIDE' and I'll send you the step by step.\n\nThe shot: the camera drops straight down the middle of a lighthouse spiral staircase, spinning the whole way, and lands right above the keeper's face while she searches the dark with a torch. I built that fall in 3D in moviepr3p.com first. That costs money too, but a lot less than a Seedance generation, so the camera gets fixed there and not in the expensive part.\n\nThen the MP4 goes into Claude with three Higgsfield sheets: the keeper, the lighthouse, the torch. The 480p draft follows the 3D fall turn for turn. One draft, same red jacket, same staircase.\n\n#aivideo #aifilmmaking #aifilm #aicinema #aitools #generativeai #previs #3dprevis #previz #virtualproduction #higgsfield #seedance #claudeai #moviepr3p #filmmaking #filmmaker #cinematography #cinematic #director #videoproduction #contentcreator #creativeworkflow #behindthescenes #indiefilm #shortfilm #vfx #3danimation #aiart #lighthouse #cameramovement",
+      "beelden": [],
+      "video": "kaia/001-reel-kaia-03-lightbulb-result.mp4",
+      "cover": "kaia/001-reel-kaia-03-lightbulb-result-thumbnail.jpg",
+      "vinger": "wmtel1",
+      "oudId": "reel-kaia-03-lightbulb-result",
+      "project": "Kaia",
+      "account": "KAIA",
+      "username": "ai.shotbreakdowns"
+    },
+    {
+      "id": "KAIA:reel-kaia-03-lightbulb-warning",
+      "naam": "Lightbulb (warning trial)",
+      "wanneer": "2026-11-18T17:00:00+01:00",
+      "caption": "Comment 'GUIDE' and I'll send you the step by step.\n\nThe shot: the camera drops straight down the middle of a lighthouse spiral staircase, spinning the whole way, and lands right above the keeper's face while she searches the dark with a torch. I built that fall in 3D in moviepr3p.com first. That costs money too, but a lot less than a Seedance generation, so the camera gets fixed there and not in the expensive part.\n\nThen the MP4 goes into Claude with three Higgsfield sheets: the keeper, the lighthouse, the torch. The 480p draft follows the 3D fall turn for turn. One draft, same red jacket, same staircase.\n\n#aivideo #aifilmmaking #aifilm #aicinema #aitools #generativeai #previs #3dprevis #previz #virtualproduction #higgsfield #seedance #claudeai #moviepr3p #filmmaking #filmmaker #cinematography #cinematic #director #videoproduction #contentcreator #creativeworkflow #behindthescenes #indiefilm #shortfilm #vfx #3danimation #aiart #lighthouse #cameramovement",
+      "beelden": [],
+      "video": "kaia/002-reel-kaia-03-lightbulb-warning.mp4",
+      "cover": "kaia/002-reel-kaia-03-lightbulb-warning-thumbnail.jpg",
+      "vinger": "8xodud",
+      "oudId": "reel-kaia-03-lightbulb-warning",
+      "project": "Kaia",
+      "account": "KAIA",
+      "username": "ai.shotbreakdowns"
+    },
+    {
+      "id": "KAIA:reel-kaia-03-lightbulb",
+      "naam": "Lightbulb",
+      "wanneer": "2026-11-19T17:00:00+01:00",
+      "caption": "Comment 'GUIDE' and I'll send you the step by step.\n\nThe shot: the camera drops straight down the middle of a lighthouse spiral staircase, spinning the whole way, and lands right above the keeper's face while she searches the dark with a torch. I built that fall in 3D in moviepr3p.com first. That costs money too, but a lot less than a Seedance generation, so the camera gets fixed there and not in the expensive part.\n\nThen the MP4 goes into Claude with three Higgsfield sheets: the keeper, the lighthouse, the torch. The 480p draft follows the 3D fall turn for turn. One draft, same red jacket, same staircase.\n\n#aivideo #aifilmmaking #aifilm #aicinema #aitools #generativeai #previs #3dprevis #previz #virtualproduction #higgsfield #seedance #claudeai #moviepr3p #filmmaking #filmmaker #cinematography #cinematic #director #videoproduction #contentcreator #creativeworkflow #behindthescenes #indiefilm #shortfilm #vfx #3danimation #aiart #lighthouse #cameramovement",
+      "beelden": [],
+      "video": "kaia/003-reel-kaia-03-lightbulb.mp4",
+      "cover": "kaia/003-reel-kaia-03-lightbulb-thumbnail.jpg",
+      "vinger": "oy9fya",
+      "oudId": "reel-kaia-03-lightbulb",
+      "project": "Kaia",
+      "account": "KAIA",
+      "username": "ai.shotbreakdowns"
     }
   ]
 }
