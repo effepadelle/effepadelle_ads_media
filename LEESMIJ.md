@@ -94,6 +94,14 @@ of gewoon nieuwe datums zetten in de planner.
 Daarom moet dit repo openbaar zijn. Zet je hem op besloten, dan komt er geen
 enkele post meer uit en zegt de taak dat het beeld niet verwerkt kon worden.
 
+**Een reel kan als trial reel.** Kies in de Agenda bij die reel *Trial,
+automatisch door* of *Trial, zelf doorzetten*. Hij gaat dan eerst alleen naar
+mensen die je niet volgen en staat niet in je raster. Bij automatisch zet
+Instagram hem door naar je volgers als hij goed loopt; bij zelf doe je dat in
+de Instagram-app, want dat kan niet via de API. Staat trial op iets wat geen
+reel is, dan plaatst de taak het niet, zodat je volgers nooit iets zien wat
+je eerst wilde testen.
+
 **Een carrousel mag maximaal tien slides hebben** en alles moet JPEG zijn. De
 planner zorgt voor dat laatste.
 

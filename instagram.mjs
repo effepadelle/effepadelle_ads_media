@@ -236,6 +236,15 @@ async function doosMetTags(user, velden, token) {
   }
 }
 
+/* trial in het plan: "auto" of "handmatig". Iets anders telt niet als
+   trial, en dan ook niet stilletjes als gewone reel: zie aanDeBeurt. */
+function trialStrategie(t) {
+  if (!t) return null;
+  if (t === "handmatig" || t === "manual") return "MANUAL";
+  if (t === true || t === "auto") return "SS_PERFORMANCE";
+  return null;
+}
+
 async function plaats(post, cred) {
   const { token, user } = cred;
   nietGetagd = [];
@@ -261,6 +270,16 @@ async function plaats(post, cred) {
     const velden = { media_type: "REELS", video_url: link(post.video),
                      caption: post.caption || "", share_to_feed: "true" };
     if (post.cover) velden.cover_url = link(post.cover);
+    /* Een trial reel: eerst alleen naar mensen die je niet volgen. Geen
+       share_to_feed, want hij hoort juist niet bij je volgers. Doorzetten
+       doet Instagram zelf als hij goed loopt (auto), of jij in de app
+       (handmatig); dat laatste kan niet via de API. */
+    const trial = trialStrategie(post.trial);
+    if (trial) {
+      delete velden.share_to_feed;
+      velden.trial_params = JSON.stringify({ graduation_strategy: trial });
+      log("  trial reel: " + (trial === "MANUAL" ? "zelf doorzetten in de app" : "Instagram zet hem door als hij goed loopt"));
+    }
     // Bij een reel alleen de naam: een plek erbij geeft een fout.
     if (namen.length) velden.user_tags = JSON.stringify(namen.slice(0, 20).map((u) => ({ username: u })));
     const doos = await doosMetTags(user, velden, token);
@@ -388,12 +407,20 @@ async function main() {
   for (const post of aanDeBeurt) {
     const n = (post.beelden || []).length;
     log("\n" + post.wanneer + "  " + (post.project ? post.project + ": " : "") + post.naam
-      + " (" + (post.video ? "reel" : n + (n === 1 ? " beeld" : " beelden")) + ")");
+      + " (" + (post.video ? (post.trial ? "trial reel" : "reel") : n + (n === 1 ? " beeld" : " beelden")) + ")");
     /* Nog niet zover? Dan wachten tot de minuut. */
     const wacht = new Date(post.wanneer) - new Date();
     if (wacht > 0 && !PROEF && !ALLEEN) {
       log("  wacht " + Math.round(wacht / 1000) + " seconden tot " + post.wanneer);
       await new Promise((r) => setTimeout(r, wacht));
+    }
+    /* Een trial die niet klopt nooit als gewone post: dan zien al je volgers
+       iets wat je eerst wilde testen. */
+    if (post.trial && (!post.video || !trialStrategie(post.trial))) {
+      log("  overgeslagen: trial kan alleen bij een reel, met auto of handmatig (nu: "
+        + JSON.stringify(post.trial) + ")");
+      mislukt++;
+      continue;
     }
     const cred = await sleutelVoor(post);
     if (!cred.token) {
@@ -411,6 +438,7 @@ async function main() {
       const id = await plaats(post, cred);
       gepost[post.id] = { wanneer: new Date().toISOString(), media: id,
                           beelden: post.beelden, video: post.video || undefined,
+                          trial: post.trial || undefined,
                           project: post.project || undefined,
                           account: cred.wie || undefined,
                           nietGetagd: nietGetagd.length ? nietGetagd.slice() : undefined };
