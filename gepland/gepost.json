@@ -1526,5 +1526,14 @@
     ],
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-foto-19": {
+    "wanneer": "2026-11-22T20:00:07.580Z",
+    "media": "17901695274398917",
+    "beelden": [
+      "cardpont/005-cardpont-foto-19.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
