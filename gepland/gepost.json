@@ -1535,5 +1535,13 @@
     ],
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-prereel-05": {
+    "wanneer": "2026-11-23T07:30:27.265Z",
+    "media": "18093931571222758",
+    "beelden": [],
+    "video": "cardpont/006-cardpont-prereel-05.mp4",
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
