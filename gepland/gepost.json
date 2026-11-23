@@ -1578,5 +1578,14 @@
     ],
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-giveaway-2~story1": {
+    "wanneer": "2026-11-23T17:10:09.167Z",
+    "media": "18080829206772470",
+    "beelden": [
+      "cardpont/story-cardpont-giveaway-2-1.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
