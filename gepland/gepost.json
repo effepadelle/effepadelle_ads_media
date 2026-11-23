@@ -1552,5 +1552,13 @@
     ],
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-teaser-9x16": {
+    "wanneer": "2026-11-23T12:31:12.595Z",
+    "media": "18212817511367220",
+    "beelden": [],
+    "video": "cardpont/008-cardpont-teaser-9x16.mp4",
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
