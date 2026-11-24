@@ -1595,5 +1595,14 @@
     "video": "cardpont/011-cardpont-prereel-10.mp4",
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "CARDPONT:cardpont-foto-07": {
+    "wanneer": "2026-11-24T08:00:10.506Z",
+    "media": "18147524185607085",
+    "beelden": [
+      "cardpont/012-cardpont-foto-07.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
