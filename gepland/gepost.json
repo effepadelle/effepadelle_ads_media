@@ -1677,5 +1677,14 @@
     "video": "kaia/002-reel-kaia-04-keyhole-warning.mp4",
     "project": "Kaia",
     "account": "ai.shotbreakdowns"
+  },
+  "CARDPONT:cardpont-foto-02": {
+    "wanneer": "2026-11-26T18:14:55.547Z",
+    "media": "18648257314016806",
+    "beelden": [
+      "cardpont/017-cardpont-foto-02.jpg"
+    ],
+    "project": "Cardpont",
+    "account": "cardpont.offload"
   }
 }
