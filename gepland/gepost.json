@@ -1710,5 +1710,13 @@
     "video": "cardpont/018-cardpont-prereel-09.mp4",
     "project": "Cardpont",
     "account": "cardpont.offload"
+  },
+  "KAIA:reel-kaia-06-magi-vs-seedance": {
+    "wanneer": "2026-11-27T18:05:37.598Z",
+    "media": "18102449981417578",
+    "beelden": [],
+    "video": "kaia/001-reel-kaia-06-magi-vs-seedance.mp4",
+    "project": "Kaia",
+    "account": "ai.shotbreakdowns"
   }
 }
