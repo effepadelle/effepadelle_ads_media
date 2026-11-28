@@ -1742,5 +1742,21 @@
     "video": "kaia/007-reel-kaia-magi-04-skylight.mp4",
     "project": "Kaia",
     "account": "ai.shotbreakdowns"
+  },
+  "KAIA:reel-kaia-magi-07-crate": {
+    "wanneer": "2026-11-28T12:34:42.651Z",
+    "media": "18141934930724779",
+    "beelden": [],
+    "video": "kaia/006-reel-kaia-magi-07-crate.mp4",
+    "project": "Kaia",
+    "account": "ai.shotbreakdowns"
+  },
+  "KAIA:reel-kaia-magi-08-slalom": {
+    "wanneer": "2026-11-28T12:35:15.646Z",
+    "media": "17925540306452126",
+    "beelden": [],
+    "video": "kaia/002-reel-kaia-magi-08-slalom.mp4",
+    "project": "Kaia",
+    "account": "ai.shotbreakdowns"
   }
 }
