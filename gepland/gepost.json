@@ -1726,5 +1726,13 @@
     "video": "kaia/001-reel-kaia-06-magi-vs-seedance.mp4",
     "project": "Kaia",
     "account": "ai.shotbreakdowns"
+  },
+  "KAIA:reel-kaia-magi-06-throw": {
+    "wanneer": "2026-11-28T09:30:37.240Z",
+    "media": "18109088558342656",
+    "beelden": [],
+    "video": "kaia/005-reel-kaia-magi-06-throw.mp4",
+    "project": "Kaia",
+    "account": "ai.shotbreakdowns"
   }
 }
